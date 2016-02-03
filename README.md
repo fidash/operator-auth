@@ -1,7 +1,7 @@
-OpenStack Auth Operator operator
+OpenStack Auth Operator
 ======================
 
-The OpenStack Auth Operator operator is a WireCloud operator that provides ...
+The OpenStack Auth Operator is a WireCloud operator that provides automatic authentication to openstack with your logged user.
 
 Build
 -----
@@ -42,20 +42,20 @@ If everything goes well, you will find a wgt file in the `dist` folder.
 
 ## Settings
 
-`Write here the preferences`
+- `cloudurl`: This is the URL where OpenStack are.
 
 ## Wiring
 
 
 ### Input Endpoints
 
-`Write here the input wiring endpoints`
-
 
 ### Output Endpoints
 
+- `authentication`: Send the data needed to authenticate:
+  - `token`: String (The auth token)
+  - `data`: Object (Some data to automatize the JStack initialization)
 
-`Write here the output wiring endpoints`
 
 ## Usage
 
