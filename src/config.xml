@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<operator xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="UPM-ETSIINF" name="{operator_openstack_auth" version="0.6.6">
+  <details>
+    <title>OpenStack Auth Operator</title>
+    <homepage>https://github.com/mgarcia/operator-OpenStackAuth</homepage>
+    <authors>Miguel Garcia</authors>
+    <email>mgarcia@conwet.com</email>
+    <image></image>
+    <smartphoneimage></smartphoneimage>
+    <description>Send authentication in OpenStack</description>
+    <longdescription>DESCRIPTION.md</longdescription>
+    <changelog>doc/changelog.md</changelog>
+    <doc>doc/index.md</doc>
+    <license>apache 2</license>
+    <issuetracker>https://github.com/mgarcia/operator-OpenStackAuth/issues</issuetracker>
+  </details>
+
+  <requirements>
+
+  </requirements>
+
+  <preferences>
+    <preference name="cloudurl" label="Cloud URL" description="Cloud URL where it will try to authenticate" type="text" default="https://cloud.lab.fiware.org"/>
+    <preference name="idmurl" label="IDM URL" description="IDM URL where it will try to authenticate" type="text" default="https://account.lab.fiware.org"/>
+  </preferences>
+  <wiring>
+    <outputendpoint name="authentication" type="text" label="Authentication" description="Send the authentication data via wiring" friendcode="openstack-auth"/>
+  </wiring>
+  <scripts>
+    <script src="lib/js/polyfill.min.js"/>
+    <script src="lib/js/OStackAuth.js"/>
+    <script src="js/OperatorOpenstackAuth.js"/>
+    <script src="js/main.js"/>
+  </scripts>
+</operator>
