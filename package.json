@@ -1,18 +1,18 @@
 {
-    "name": "operator_openstack_auth",
+    "name": "operator-auth",
     "description": "Send authentication in OpenStack",
     "version": "0.6.7",
-    "homepage": "https://github.com/fidash/operator-OpenStackAuth",
+    "homepage": "https://github.com/fidash/operator-auth",
     "author": {
         "name": "Miguel Garcia",
         "email": "mgarcia@conwet.com"
     },
     "repository": {
         "type": "git",
-        "url": "git://github.com/fidash/operator-OpenStackAuth.git"
+        "url": "git://github.com/fidash/operator-auth.git"
     },
     "bugs": {
-        "url": "https://github.com/fidash/operator-OpenStackAuth/issues"
+        "url": "https://github.com/fidash/operator-auth/issues"
     },
     "licenses": [
         {

@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<operator xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="UPM-ETSIINF" name="{operator_openstack_auth" version="0.6.6">
+<operator xmlns="http://wirecloud.conwet.fi.upm.es/ns/macdescription/1" vendor="UPM-ETSIINF" name="operator-auth" version="0.6.7">
   <details>
     <title>OpenStack Auth Operator</title>
-    <homepage>https://github.com/mgarcia/operator-OpenStackAuth</homepage>
+    <homepage>https://github.com/fidash/operator-auth</homepage>
     <authors>Miguel Garcia</authors>
     <email>mgarcia@conwet.com</email>
     <image></image>
@@ -12,7 +12,7 @@
     <changelog>doc/changelog.md</changelog>
     <doc>doc/index.md</doc>
     <license>apache 2</license>
-    <issuetracker>https://github.com/mgarcia/operator-OpenStackAuth/issues</issuetracker>
+    <issuetracker>https://github.com/fidash/operator-auth/issues</issuetracker>
   </details>
 
   <requirements>
