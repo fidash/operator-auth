@@ -166,6 +166,27 @@ module.exports = function (grunt) {
             }
         },
 
+        karma: {
+            headless: {
+                configFile: 'karma.conf.js',
+                options: {
+                    browsers: ['PhantomJS']
+                }
+            },
+
+            all: {
+                configFile: 'karma.conf.js',
+            },
+
+            debug: {
+                configFile: 'karma.conf.js',
+                options: {
+                    preprocessors: [],
+                    singleRun: false
+                }
+            }
+        },
+
         jasmine: {
             test: {
                 src: ['src/js/*.js', '!src/js/main.js'],
@@ -220,13 +241,15 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-strip-code');
     grunt.loadNpmTasks('grunt-text-replace');
     grunt.loadNpmTasks('grunt-jsbeautifier');
+    grunt.loadNpmTasks('grunt-karma');
 
     grunt.registerTask('test', [
 
         'jshint',
         'jshint:grunt',
         'jscs',
-        'jasmine:coverage'
+        // 'jasmine:coverage'
+        'karma:headless'
 
     ]);
 
