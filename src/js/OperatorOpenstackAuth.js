@@ -65,10 +65,10 @@ var OperatorOpenstackAuth = (function () {
     var OK = function OK(params) {
         var token = params.token;
         var response = params.response;
+
         var body = JSON.parse(response.responseText);
         // Temporal change to fix catalog name
         body.token.serviceCatalog = body.token.catalog;
-
         var sendJSON = {
             token: token,
             body: body
@@ -85,6 +85,7 @@ var OperatorOpenstackAuth = (function () {
     var ERROR = function ERROR(url, response) {
         var error = JSON.parse(response.responseText).error;
         var message = error.code + " " + error.title + " " + error.message;
+
         MashupPlatform.operator.log("Error authenticating: " + message);
 
         STOP = true;
@@ -108,8 +109,8 @@ var OperatorOpenstackAuth = (function () {
 
     /* test-code */
     OperatorOpenstackAuth.prototype = {
+        authenticate: authenticate
     };
-
     /* end-test-code */
 
     return OperatorOpenstackAuth;

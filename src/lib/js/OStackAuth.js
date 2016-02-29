@@ -115,6 +115,7 @@ var OStackAuth = (function () {
 
         return requestPromise(url + "/keystone/v3/role_assignments?user.id=" + username, options).then(function (resp) {
             var responseBody = JSON.parse(resp.responseText);
+
             return Promise.all(responseBody.role_assignments.map(function (role) {
                 if (role.scope.project) {
                     return getProjectPermissions(url, role.scope.project.id, generalToken).then(function (p) {
@@ -275,9 +276,9 @@ var OStackAuth = (function () {
     };
 
     var getTokenAndParams = function getTokenAndParams(url) {
-        return getOpenStackToken(CLOUD_URL) // Get initial token
+        return getOpenStackToken(url) // Get initial token
             .then(function (responseR) {
-                return getProjects(CLOUD_URL, responseR).then(function (x) {
+                return getProjects(url, responseR).then(function (x) {
                     return x.length > 0 ? Promise.resolve(x[0]) : Promise.reject("No token");
                 });
             });
