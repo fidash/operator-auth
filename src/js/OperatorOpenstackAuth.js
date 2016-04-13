@@ -107,11 +107,6 @@ var OperatorOpenstackAuth = (function () {
     /************AUXILIAR FUNCTIONS**********/
     /****************************************/
 
-    /* test-code */
-    OperatorOpenstackAuth.prototype = {
-        authenticate: authenticate
-    };
-    /* end-test-code */
 
     return OperatorOpenstackAuth;
 
