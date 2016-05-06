@@ -1,6 +1,9 @@
 OpenStack Auth Operator
 ======================
 
+[![GitHub license](https://img.shields.io/badge/license-AGPLv3-blue.svg)](https://raw.githubusercontent.com/fidash/operator-auth/master/LICENSE.txt)
+[![Build Status](https://build.conwet.fi.upm.es/jenkins/view/FI-Dash/job/Operator%20Auth/badge/icon)](https://build.conwet.fi.upm.es/jenkins/view/FI-Dash/job/Operator%20Auth/)
+
 The OpenStack Auth Operator is a WireCloud operator that provides automatic authentication to openstack with your logged user.
 
 Build
